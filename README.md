@@ -1,6 +1,6 @@
 # AdoptOpenJDK Ansible role
 
-This Ansible Role installs the [AdoptOpenJDK Java VM](https://adoptopenjdk.net/) java in a Debian/Ubuntu or CentOS environment
+This Ansible Role installs the [AdoptOpenJDK Java VM](https://adoptopenjdk.net/) as a package in a Debian/Ubuntu or CentOS environment.
 
 - [AdoptOpenJDK Ansible role](#adoptopenjdk-ansible-role)
   - [Getting Started](#getting-started)
@@ -16,16 +16,14 @@ This Ansible Role installs the [AdoptOpenJDK Java VM](https://adoptopenjdk.net/)
 
 ### Prerequisities
 
-To use this role as dependency in your playbook, prerequisites below:
+To use this role as dependency in your playbook, prerequisites are described below:
 
-Ansible 2.7.7 version installed.
-Inventory destination should be a Debian/Ubuntu or CentOS environment.
-
-For testing purposes you will need [Python 3.6+](https://www.python.org/downloads/release/python-368/) and [Pipenv](https://github.com/pypa/pipenv)
+* Ansible 2.4 version installed.
+* Inventory destination should be a Debian/Ubuntu or CentOS environment.
 
 ### Configuring
 
-The role has some defaults set. If you want to override them, set the following variables:
+The role has some defaults set as variables. If you want to override them, set the following variables in one the appropriate ansible places:
 
 * **adoptopenjdk_package:** _adoptopenjdk-13-hotspot_
   
@@ -35,7 +33,7 @@ The role has some defaults set. If you want to override them, set the following 
 
   This is either "present" to install Java or "absent" to deinstall it.
 
-Possible package names:
+Possible package names on Debian-based systems:
 
 ```
 adoptopenjdk-11-hotspot
@@ -66,7 +64,7 @@ adoptopenjdk-8-openj9xl-jre
 
 ### Installing
 
-Create or add to your roles dependency file (e.g requirements.yml):
+Create or add to your roles dependency file (e.g `requirements.yml`):
 
 ```yml
 - src: http://github.com/sfuhrm/adoptjopendk_role.git
@@ -84,7 +82,7 @@ or using [Ansible Galaxy](https://galaxy.ansible.com/sfuhrm/adoptopenjdk_role/) 
 ```
 
 
-Install the role with ansible-galaxy command:
+Install the role with the `ansible-galaxy` command:
 
 ```sh
 $ ansible-galaxy install -p roles -r requirements.yml -f
@@ -103,11 +101,11 @@ Use in a playbook:
 
 ### Ansible
 
-[defaults/main.yml](https://github.com/sfuhrm/adoptopenjdk_role/blob/master/defaults/main.yml)
+The defaults for the role can be seen in [defaults/main.yml](https://github.com/sfuhrm/adoptopenjdk_role/blob/master/defaults/main.yml).
 
 #### OpenJDK
 
-A specific OpenJDK version can be selected by overriding the `adoptopenjdk_package` variable using group vars/host vars:
+A specific AdoptOpenJDK version can be selected by overriding the `adoptopenjdk_package` variable using `group_vars`/`host_vars`:
 
 ## License
 
