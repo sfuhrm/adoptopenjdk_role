@@ -7,7 +7,7 @@
 
 - name: Add apt repository for AdoptJDK
   apt_repository:
-    repo: deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ stable main
+    repo: "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_distribution_release }} main"
     filename: adoptjdk_role
     state: "{{ adoptjdk_state }}"
 
