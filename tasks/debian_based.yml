@@ -10,6 +10,8 @@
     url: https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
     state: ${ adoptjdk_state }
 
-- name: Update apt cache
+- name: Install AdoptJDK package
   apt:
+    name: ${ adoptjdk_package }
+    state: ${ adoptjdk_state }
     update_cache: yes
