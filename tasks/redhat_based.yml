@@ -1,11 +1,12 @@
 ---
-- name: Add apt repository for AdoptJDK
+- name: Add yum repository for AdoptJDK
   yum_repository:
     baseurl: http://adoptopenjdk.jfrog.io/adoptopenjdk/rpm/centos/7/$(uname -m)
     enabled: yes
     gpgcheck: yes
     gpgkey: https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
     name: adoptjdk_role
+    description: AdoptJDK Java packages
     state: "{{ adoptjdk_state }}"
 
 - name: Install AdoptJDK package
