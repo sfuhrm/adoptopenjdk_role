@@ -6,10 +6,10 @@
     gpgcheck: yes
     gpgkey: https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
     name: adoptjdk_role
-    state: ${ adoptjdk_state }
+    state: {{ adoptjdk_state }}
 
 - name: Install AdoptJDK package
   yum:
-    name: ${ adoptjdk_package }
-    state: ${ adoptjdk_state }
+    name: {{ adoptjdk_package }}
+    state: {{ adoptjdk_state }}
     update_cache: yes

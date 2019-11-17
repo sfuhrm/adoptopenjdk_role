@@ -3,15 +3,15 @@
 - name: Add the Apt signing key of AdoptJDK from jfrog.io
   apt_key:
     url: https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-    state: ${ adoptjdk_state }
+    state: {{ adoptjdk_state }}
 
 - name: Add apt repository for AdoptJDK
   apt_repository:
     url: https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-    state: ${ adoptjdk_state }
+    state: {{ adoptjdk_state }}
 
 - name: Install AdoptJDK package
   apt:
-    name: ${ adoptjdk_package }
-    state: ${ adoptjdk_state }
+    name: {{ adoptjdk_package }}
+    state: {{ adoptjdk_state }}
     update_cache: yes
