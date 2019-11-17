@@ -1,7 +1,11 @@
 ---
+- name: Find out OS release
+  shell: . os-release  && echo $ID
+  register: osrelease
+
 - name: Add yum repository for AdoptJDK
   yum_repository:
-    baseurl: http://adoptopenjdk.jfrog.io/adoptopenjdk/rpm/centos/7/$(uname -m)
+    baseurl: "http://adoptopenjdk.jfrog.io/adoptopenjdk/rpm/{{ osrelease }}/$releasever/$basearch"
     enabled: yes
     gpgcheck: yes
     gpgkey: https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
