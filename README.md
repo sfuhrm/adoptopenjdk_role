@@ -5,6 +5,7 @@ This Ansible Role installs the [AdoptJDK Java VM](https://adoptopenjdk.net/) jav
 - [AdoptJDK Ansible role](#adoptjdk-ansible-role)
   - [Getting Started](#getting-started)
     - [Prerequisities](#prerequisities)
+    - [Configuring](#configuring)
     - [Installing](#installing)
   - [Usage](#usage)
     - [Ansible](#ansible)
@@ -12,8 +13,6 @@ This Ansible Role installs the [AdoptJDK Java VM](https://adoptopenjdk.net/) jav
   - [License](#license)
 
 ## Getting Started
-
-
 
 ### Prerequisities
 
@@ -23,6 +22,45 @@ Ansible 2.7.7 version installed.
 Inventory destination should be a Debian/Ubuntu or CentOS environment.
 
 For testing purposes you will need [Python 3.6+](https://www.python.org/downloads/release/python-368/) and [Pipenv](https://github.com/pypa/pipenv)
+
+### Configuring
+
+The role has some defaults set. If you want to override them, set the following variables:
+
+* adoptjdk_package: adoptopenjdk-13-hotspot
+  This is the OS package name to install.
+  See below for a list for Debian based systems.
+* adoptjdk_state: present
+  This is either "present" to install Java or "absent" to deinstall it.
+
+Possible package names:
+
+```
+adoptopenjdk-11-hotspot
+adoptopenjdk-11-hotspot-jre
+adoptopenjdk-11-openj9
+adoptopenjdk-11-openj9-jre
+adoptopenjdk-11-openj9xl
+adoptopenjdk-11-openj9xl-jre
+adoptopenjdk-12-hotspot
+adoptopenjdk-12-hotspot-jre
+adoptopenjdk-12-openj9
+adoptopenjdk-12-openj9-jre
+adoptopenjdk-12-openj9xl
+adoptopenjdk-12-openj9xl-jre
+adoptopenjdk-13-hotspot
+adoptopenjdk-13-hotspot-jre
+adoptopenjdk-13-openj9
+adoptopenjdk-13-openj9-jre
+adoptopenjdk-13-openj9xl
+adoptopenjdk-13-openj9xl-jre
+adoptopenjdk-8-hotspot
+adoptopenjdk-8-hotspot-jre
+adoptopenjdk-8-openj9
+adoptopenjdk-8-openj9-jre
+adoptopenjdk-8-openj9xl
+adoptopenjdk-8-openj9xl-jre
+```
 
 ### Installing
 
