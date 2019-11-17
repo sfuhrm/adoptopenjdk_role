@@ -1,8 +1,8 @@
-# AdoptJDK Ansible role
+# AdoptOpenJDK Ansible role
 
-This Ansible Role installs the [AdoptJDK Java VM](https://adoptopenjdk.net/) java in a Debian/Ubuntu or CentOS environment
+This Ansible Role installs the [AdoptOpenJDK Java VM](https://adoptopenjdk.net/) java in a Debian/Ubuntu or CentOS environment
 
-- [AdoptJDK Ansible role](#adoptjdk-ansible-role)
+- [AdoptOpenJDK Ansible role](#adoptopenjdk-ansible-role)
   - [Getting Started](#getting-started)
     - [Prerequisities](#prerequisities)
     - [Configuring](#configuring)
@@ -27,11 +27,11 @@ For testing purposes you will need [Python 3.6+](https://www.python.org/download
 
 The role has some defaults set. If you want to override them, set the following variables:
 
-* **adoptjdk_package:** _adoptopenjdk-13-hotspot_
+* **adoptopenjdk_package:** _adoptopenjdk-13-hotspot_
   
   This is the OS package name to install.
   See below for a list for Debian based systems.
-* **adoptjdk_state:** _present_
+* **adoptopenjdk_state:** _present_
 
   This is either "present" to install Java or "absent" to deinstall it.
 
@@ -69,18 +69,18 @@ adoptopenjdk-8-openj9xl-jre
 Create or add to your roles dependency file (e.g requirements.yml):
 
 ```yml
-- src: http://github.com/sfuhrm/adoptjdk_role.git
+- src: http://github.com/sfuhrm/adoptjopendk_role.git
   scm: git
   version: master
-  name: adoptjdk_role
+  name: adoptopenjdk_role
 ```
 
-or using [Ansible Galaxy](https://galaxy.ansible.com/sfuhrm/adoptjdk_role/) as origin if you prefer:
+or using [Ansible Galaxy](https://galaxy.ansible.com/sfuhrm/adoptopenjdk_role/) as origin if you prefer:
 
 ```yml
-- src: sfuhrm.adoptjdk_role
+- src: sfuhrm.adoptopenjdk_role
   version: master
-  name: adoptjdk_role
+  name: adoptopenjdk_role
 ```
 
 
@@ -96,18 +96,18 @@ Use in a playbook:
 ---
 - hosts: someserver
   roles:
-    - adoptjdk_role
+    - adoptopenjdk_role
 ```
 
 ## Usage
 
 ### Ansible
 
-[defaults/main.yml](https://github.com/sfuhrm/adoptjdk_role/blob/master/defaults/main.yml)
+[defaults/main.yml](https://github.com/sfuhrm/adoptopenjdk_role/blob/master/defaults/main.yml)
 
 #### OpenJDK
 
-A specific OpenJDK version can be selected by overriding the `adoptjdk_package` variable using group vars/host vars:
+A specific OpenJDK version can be selected by overriding the `adoptopenjdk_package` variable using group vars/host vars:
 
 ## License
 

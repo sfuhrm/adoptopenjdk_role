@@ -3,18 +3,18 @@
   shell: . /etc/os-release  && echo $ID
   register: osrelease
 
-- name: Add yum repository for AdoptJDK
+- name: Add yum repository for AdoptOpenJDK
   yum_repository:
     baseurl: "http://adoptopenjdk.jfrog.io/adoptopenjdk/rpm/{{ osrelease.stdout }}/$releasever/$basearch"
     enabled: yes
     gpgcheck: yes
     gpgkey: https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-    name: adoptjdk_role
-    description: AdoptJDK Java packages
-    state: "{{ adoptjdk_state }}"
+    name: adoptopenjdk_role
+    description: AdoptOpenJDK Java packages
+    state: "{{ adoptopenjdk_state }}"
 
-- name: Install AdoptJDK package
+- name: Install AdoptOpenJDK package
   yum:
-    name: "{{ adoptjdk_package }}"
-    state: "{{ adoptjdk_state }}"
+    name: "{{ adoptopenjdk_package }}"
+    state: "{{ adoptopenjdk_state }}"
     update_cache: yes

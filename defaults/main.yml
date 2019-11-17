@@ -1,6 +1,6 @@
 ---
 
 # which OS package to install
-adoptjdk_package: adoptopenjdk-13-hotspot
+adoptopenjdk_package: adoptopenjdk-13-hotspot
 # present or absent
-adoptjdk_state: present
+adoptopenjdk_state: present

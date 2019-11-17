@@ -2,7 +2,7 @@
 galaxy_info:
   author: sfuhrm
   company: sfuhrm
-  description: AdoptJDK Java role
+  description: AdoptOpenJDK Java role
   min_ansible_version: 2.4
   license: Apache 2.0
   galaxy_tags:

@@ -1,18 +1,18 @@
 ---
 
-- name: Add the Apt signing key of AdoptJDK from jfrog.io
+- name: Add the Apt signing key of AdoptOpenJDK from jfrog.io
   apt_key:
     url: https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-    state: "{{ adoptjdk_state }}"
+    state: "{{ adoptopenjdk_state }}"
 
-- name: Add apt repository for AdoptJDK
+- name: Add apt repository for AdoptOpenJDK
   apt_repository:
     repo: "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_distribution_release }} main"
-    filename: adoptjdk_role
-    state: "{{ adoptjdk_state }}"
+    filename: adoptopenjdk_role
+    state: "{{ adoptopenjdk_state }}"
 
-- name: Install AdoptJDK package
+- name: Install AdoptOpenJDK package
   apt:
-    name: "{{ adoptjdk_package }}"
-    state: "{{ adoptjdk_state }}"
+    name: "{{ adoptopenjdk_package }}"
+    state: "{{ adoptopenjdk_state }}"
     update_cache: yes
