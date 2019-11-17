@@ -105,7 +105,7 @@ The defaults for the role can be seen in [defaults/main.yml](https://github.com/
 
 #### OpenJDK
 
-A specific AdoptOpenJDK version can be selected by overriding the `adoptopenjdk_package` variable using `group_vars`/`host_vars`:
+A specific AdoptOpenJDK version can be selected by overriding the `adoptopenjdk_package` variable using `group_vars`/`host_vars`/`playbook.yml` vars:
 
 ## License
 
