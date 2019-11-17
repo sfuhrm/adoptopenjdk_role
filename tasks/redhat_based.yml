@@ -1,6 +1,6 @@
 ---
 - name: Find out OS release
-  shell: . os-release  && echo $ID
+  shell: . /etc/os-release  && echo $ID
   register: osrelease
 
 - name: Add yum repository for AdoptJDK
