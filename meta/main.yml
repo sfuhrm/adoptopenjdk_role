@@ -9,3 +9,15 @@ galaxy_info:
     - development
     - java
     - jdk
+    - openjdk
+    - adoptopenjdk
+  platforms:
+  - name: Fedora
+    versions:
+      - all
+  - name: Ubuntu
+    versions:
+      - all
+  - name: Debian
+    versions:
+      - all
