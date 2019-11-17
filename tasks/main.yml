@@ -1,0 +1,8 @@
+---
+
+- name: Install Debian specific parts
+  include_tasks: debian_based.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+- name: Install Redhat specific parts
+  include_tasks: redhat_based.yml
+  when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'

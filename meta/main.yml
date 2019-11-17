@@ -1,0 +1,8 @@
+---
+galaxy_info:
+  role_name: adoptjdk_role
+  author: sfuhrm
+  company: sfuhrm
+  description: AdoptJDK Java role
+  min_ansible_version: 2.7.7
+  license: Apache 2.0
