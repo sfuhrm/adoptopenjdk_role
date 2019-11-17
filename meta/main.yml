@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: adoptjdk_role
+  role_name: sfuhrm.adoptjdk_role
   author: sfuhrm
   company: sfuhrm
   description: AdoptJDK Java role
