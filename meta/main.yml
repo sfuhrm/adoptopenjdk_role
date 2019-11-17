@@ -6,3 +6,7 @@ galaxy_info:
   description: AdoptJDK Java role
   min_ansible_version: 2.7.7
   license: Apache 2.0
+  galaxy_tags:
+    - development
+    - java
+    - jdk
