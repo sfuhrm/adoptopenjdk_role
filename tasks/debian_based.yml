@@ -7,7 +7,7 @@
 
 - name: Add apt repository for AdoptJDK
   apt_repository:
-    repo: https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+    repo: deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ stable main
     filename: adoptjdk_role
     state: "{{ adoptjdk_state }}"
 
