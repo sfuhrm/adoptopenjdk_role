@@ -27,10 +27,12 @@ For testing purposes you will need [Python 3.6+](https://www.python.org/download
 
 The role has some defaults set. If you want to override them, set the following variables:
 
-* adoptjdk_package: adoptopenjdk-13-hotspot
+* **adoptjdk_package:** _adoptopenjdk-13-hotspot_
+  
   This is the OS package name to install.
   See below for a list for Debian based systems.
-* adoptjdk_state: present
+* **adoptjdk_state:** _present_
+
   This is either "present" to install Java or "absent" to deinstall it.
 
 Possible package names:
