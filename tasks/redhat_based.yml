@@ -5,7 +5,7 @@
 
 - name: Add yum repository for AdoptJDK
   yum_repository:
-    baseurl: "http://adoptopenjdk.jfrog.io/adoptopenjdk/rpm/{{ osrelease }}/$releasever/$basearch"
+    baseurl: "http://adoptopenjdk.jfrog.io/adoptopenjdk/rpm/{{ osrelease.stdout }}/$releasever/$basearch"
     enabled: yes
     gpgcheck: yes
     gpgkey: https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
