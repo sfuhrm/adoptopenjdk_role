@@ -31,7 +31,7 @@ The role has some defaults set as variables. If you want to override them, set t
   See below for a list for Debian based systems.
 * **adoptopenjdk_state:** _present_
 
-  This is either "present" to install Java or "absent" to deinstall it.
+  This is either `present` to install Java or `absent` to deinstall it.
 
 Possible package names on Debian-based systems:
 
